@@ -239,3 +239,5 @@ def retorna_media_idades(dicionario):
 
 
 print(retorna_media_idades(remover_menos_30(people_dict)))
+
+
