@@ -1,0 +1,60 @@
+esta semana vamos receber a primeira parte do trabalho, e na próxima semana a segunda parte
+
+- na primeira parte vamos ter que fazer load para o python de uma porção especifica de um ficheiro CSV muito grande que nos vão dar;
+- vamos então desenvolver um metodo para ir ao csv buscar do indice i ao indice j
+
+- na segunda parte, o objetivo é encontrar o maior e o menor número do csv.
+
+- temos q ordenar os números todos do pedacinho q tirámos, para cada pedaço vamos ter q saber qual o maior e o menor número
+
+
+- vamos ter q escolher por nós prórios o tamanho do pedaço q estamos a tirar para q o algoritmo seja o mais eficiente possivel 
+
+- o objetivo é encontrar o maximo e o minimo o mais rápido possivel
+
+- a cada iteração q fazemos temos q guardar o máximo e o minimo
+
+- podemos ter um csv à parte onde guarda o maximo e minimo de cada iteração e o tempo q demorou (ou de 100 em 100 iterações por exemplo) para no final decidirmos, até pq se o computador ficar sem bateria n temos o registo de nada, ou se o python crashar ficamos sem nada do processo
+
+- meter um cornometro com o timeit ou com o time são bibl do python para podermos cronometrar quanto tempo é q demoramos a fazer cada iteração
+
+- vamos ter tb q fazer um relatório cm as conclusões q tirámos
+
+- à medida que vamos carregando pedaçinhos, n queremos ter em memória o anterior
+
+- ter várias funções para cada tarefa, uma para ir buscar a lista, outra par ao sorting, outra para ir buscar o csv, ter tb por vários ficheiros
+
+- seguir o pep8
+
+- o pandas n é fixe para ler o ficheiro, demora muito tempo, há um outro metodo q funciona melhor
+https://medium.com/analytics-vidhya/optimized-ways-to-read-large-csvs-in-python-ab2b36a7914e
+fastparquet is by far the fastest
+https://www.analyticsvidhya.com/blog/2021/04/how-to-manipulate-a-20g-csv-file-efficiently/
+
+- no enunciado diz q temos q dizer qual o tamanho do pedaço q queremos abrir, quando usamos o chuncksize no pandas,ele abre à mesma o ficheiro inteiro, a unica diferença é q o divide em vários ficheiros do tamanho q lhe dissermos
+
+- se quisermos o pedaço 5 não queremos fazer load dos pedaços 1, 2 3 e 4. 
+- precisamos de ter algo que nos diga que temos q começar a partir da iteração X caso o pc vá abaixo, e ficamos sem o trabalho q foi feito entretanto
+
+- pesquisar qual a melhor maneira de obter um pedaço do csv, dado um inicio (indice i) e um final (indice j)
+
+- definir n de partições, o tipo de sorting q queremos fazer
+- se a partição é 1000, temos q ter um metodo para guardar as coisas nalgum sitio se o pc for abaixo, isto tem q ser updatado fora do python, fazer write num excel. Ou seja, em cada iteração vou ter um numero minimo e um numero máximo, esse minimo e esse maximo têm q ser guardados num ficheiro à parte, e tb tenho q saber a partir de qual das iterações tenho que continuar caso o processo seja interrompido
+Mas n precisamos de tar sempre a guardar, só de x em x iterações
+
+- desenvolver uma função para cada processo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
